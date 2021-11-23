@@ -2,7 +2,7 @@ const assertEqual = function(actual, expected) {
   actual === expected ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-const tail = function(arr) {
+const tail = function (arr) {
   return Array.isArray(arr) ? arr.slice(1) : ''; //check if argument is array and return new array with [0] removed if so.
 };
 
@@ -38,7 +38,7 @@ compareArr(["hey", "its", "me"], ["its", "me"]);
 
 
 
-//Method 2 (More Simple) - Convert the actual/expected arrays into strings via .join(' ') method.
+//Method 2 (More Simple) - Convert the actual/expected arrays into strings via .join(' ') method. 
 /*
 const arrCompare = function(arr1, arr2) {
   assertEqual(arr1.join(' '), arr2.join(' '));
