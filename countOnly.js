@@ -9,13 +9,12 @@ const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
   for (const item of allItems) {
-    if (results[item]) {
-      results[item] += 1;
-    } else {
-      for (let nameKey in itemsToCount) {
-        if (nameKey === item && itemsToCount[nameKey]) {
-          results[item] = 1;
-        }
+    // (Last step) only count specific items. No need to loop thru obj. If it exists, first condition will return true.
+    if (itemsToCount[item]) {
+      if (results[item]) {
+        results[item] += 1; // if it was already added to the results object abouve increase counter by 1
+      } else {
+        results[item] = 1; // if it was not added to {results}, create a new key for it & set counter to 1
       }
     }
   }
