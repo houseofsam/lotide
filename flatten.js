@@ -1,19 +1,19 @@
-const eqArrays = function(arr1, arr2) {
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+// const eqArrays = function(arr1, arr2) {
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] !== arr2[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
 
-const assertArraysEqual = function(actualArr, expectedArr) {
-  if (eqArrays(actualArr, expectedArr)) {
-  console.log(`✅✅✅ Assertion Passed: ${actualArr} === ${expectedArr}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actualArr} !== ${expectedArr}`);
-  }  
-};
+// const assertArraysEqual = function(actualArr, expectedArr) {
+//   if (eqArrays(actualArr, expectedArr)) {
+//   console.log(`✅✅✅ Assertion Passed: ${actualArr} === ${expectedArr}`);
+//   } else {
+//     console.log(`🛑🛑🛑 Assertion Failed: ${actualArr} !== ${expectedArr}`);
+//   }  
+// };
 
 const flatten = function(arr) {
   const flatArray = [];
@@ -32,3 +32,6 @@ const flatten = function(arr) {
 
 
 flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6] 
+
+
+// Not sure why instructions ask to copy eqArrays and assertArraysEqual when it's not used for assertion on this module & considering that assertArraysEqual does not work on nested arrays.
