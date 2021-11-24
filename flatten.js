@@ -32,6 +32,7 @@ const flatten = function(arr) {
 
 
 flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6] 
+console.log(flatten([1, 2, [3, 4, 4.5], 5, [6]]));
 
 
 // Not sure why instructions ask to copy eqArrays and assertArraysEqual when it's not used for assertion on this module & considering that assertArraysEqual does not work on nested arrays.
