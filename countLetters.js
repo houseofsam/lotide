@@ -25,6 +25,9 @@ countLetters("lighthouse in the house");
 countLetters('');
 // countLetters(43); throws error 
 
+let newarr = (Object.keys(countLetters('hello')));
+
+console.log(newarr)
 
 // not sure whether I should count capital and lowercase letters as one. 
 // Also not sure if I should include punctuation.
