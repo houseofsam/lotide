@@ -6,23 +6,23 @@ const countLetters = function(sentence) {
   let letterCounter = {};
 
   for (let letter of sentence) {
-    const isANewLetter = letter !== ' ' && letterCounter[letter];
-    
-    if (isANewLetter) {
-      letterCounter[letter] += 1;
-    } else if (letter !== ' ') {
-      letterCounter[letter] = 1;
+    if (letter !== ' ') {
+      if (letterCounter[letter]) {
+        letterCounter[letter] += 1;
+      } else {
+        letterCounter[letter] = 1;
+      }
     }
   }
 
-  console.log(letterCounter);
+  // console.log(letterCounter);
   return letterCounter;
 };
 
 
-// countLetters('Hello I\'m a student at LHL');
+countLetters('Hello I\'m a student at LHL');
 countLetters("lighthouse in the house");
-// countLetters('');
+countLetters('');
 // countLetters(43); throws error 
 
 // let newarr = (Object.keys(countLetters('hello')));
