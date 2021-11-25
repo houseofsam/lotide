@@ -1,7 +1,3 @@
-const assertEqual = function(actual, expected) {
-  actual === expected ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-};
-
 const eqArrays = function(arr1, arr2) {
   for (let i = 0; i < arr1.length; i++) {
     if (arr1.length !== arr2.length || arr1[i] !== arr2[i]) {
@@ -12,6 +8,7 @@ const eqArrays = function(arr1, arr2) {
 };
 
 const eqObjects = function(object1, object2) {
+
   console.log(object1, object2);
   const obj1Keys = Object.keys(object1);
   const obj2Keys = Object.keys(object2);
@@ -34,24 +31,21 @@ const eqObjects = function(object1, object2) {
     }
   }
   return true;
-}
+};
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-// eqObjects(ab, ba); // => true
+const assertObjectsEqual = function(actual, expected) {
+  const inspect = require('util').inspect;
+  
+  if (eqObjects(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+  }  
+};
 
-const abc = { a: "1", b: "2", c: "3" };
-// eqObjects(ab, abc); // => false
+assertObjectsEqual({ a:1 }, {a: [1, 2, 3]}); //fail. why does it pass? (Had to switch to && in line 22)
+assertObjectsEqual({a:1, b:2}, {a:1}); //fail
+assertObjectsEqual({},{}); // pass
+assertObjectsEqual({a:1, b:2}, {a:1, b:2}); //pass
+assertObjectsEqual({a: 1, b:[2, 3, 'hey']}, {a: 1, b:[2, 3, 'hey']}); //pass
 
-assertEqual(eqObjects(ab, ba), true);
-assertEqual(eqObjects(ab, abc), false);
-
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-// eqObjects(cd, dc); // => true
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-// eqObjects(cd, cd2); // => false
-
-assertEqual(eqObjects(cd, dc), true);
-assertEqual(eqObjects(cd, cd2), false);
