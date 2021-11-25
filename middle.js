@@ -16,7 +16,7 @@ const assertArraysEqual = function(actualArr, expectedArr) {
   }  
 };
 
-const oddGetMiddleIndex = function(indexes) {
+const getMiddleIdx = function(indexes) {
   return Math.floor(indexes.length / 2);
 }
 
@@ -24,12 +24,12 @@ const middle = function(arr) {
   let output = [];
 
   if (arr.length <= 2) {
-    return []
+    return [];
   } else if (!(arr.length % 2)) {
-    output.push(arr[oddGetMiddleIndex(arr) - 1]);
-    output.push(arr[oddGetMiddleIndex(arr)]);
+    output.push(arr[getMiddleIdx(arr) - 1]);
+    output.push(arr[getMiddleIdx(arr)]);
   } else {
-    output = [arr[oddGetMiddleIndex(arr)]];
+    output = [arr[getMiddleIdx(arr)]];
   }
   // console.log(output);
   return output;
