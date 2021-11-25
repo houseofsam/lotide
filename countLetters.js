@@ -6,15 +6,11 @@ const countLetters = function(sentence) {
   let letterCounter = {};
 
   for (let letter of sentence) {
-    if (letter === ' ') {
-      continue; //breaks out of current iteration. break breaks out of for loop completely.
-      
-      //possible to never write nested ifs. 
-    }
-
-    if (letterCounter[letter]) {
+    const isANewLetter = letter !== ' ' && letterCounter[letter];
+    
+    if (isANewLetter) {
       letterCounter[letter] += 1;
-    } else {
+    } else if (letter !== ' ') {
       letterCounter[letter] = 1;
     }
   }
