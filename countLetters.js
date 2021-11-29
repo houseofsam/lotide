@@ -6,16 +6,20 @@ const countLetters = function(sentence) {
   let letterCounter = {};
 
   for (let letter of sentence) {
-    if (letter !== ' ') {
-      if (letterCounter[letter]) {
-        letterCounter[letter] += 1;
-      } else {
-        letterCounter[letter] = 1;
-      }
+    if (letter === ' ') {
+      continue; //breaks out of current iteration. break breaks out of for loop completely.      
+    }
+    
+    if (letterCounter[letter]) {
+      // if current letter already exists as a key in letterCounter object
+      letterCounter[letter] += 1;
+    } else {
+      // if not, create a new key and set its value to one
+      letterCounter[letter] = 1;
     }
   }
 
-  // console.log(letterCounter);
+  console.log(letterCounter);
   return letterCounter;
 };
 
@@ -26,9 +30,7 @@ countLetters('');
 // countLetters(43); throws error 
 
 let newarr = (Object.keys(countLetters('hello')));
-
 console.log(newarr)
 
-// not sure whether I should count capital and lowercase letters as one. 
-// Also not sure if I should include punctuation.
 // I can most def use regex here. 
+// //possible to never write nested ifs. 
