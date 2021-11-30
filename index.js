@@ -4,19 +4,20 @@ const head = require('./head');
 const tail = require('./tail');
 const middle = require('./middle');
 
+// ('./eqArrays.js);
 // To-do
+// ('./eqObjects.js);
+// ('./assertObjectEquals.js);
 // ('./flatten.js);
 // ('./countOnly.js);
-// ('./letterPositions.js);
+// ('./findKey.js);
 // ('./findKeyByValue.js);
-// ('./eqObjects.js);
-// ('./eqArrays.js);
-// ('./assertObjectEquals.js);
 // ('./takeuntil.js);
 // ('./without.js);
 // ('./map.js);
+// ('./letterPositions.js);
 // ('./countLetters.js);
-// ('./countUntil.js);
+// ('./takeUntil.js);
 
 
 module.exports = {

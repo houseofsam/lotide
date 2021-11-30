@@ -28,9 +28,9 @@ The following functions are currently implemented:
 
 * `assertEqual(...)`: Asserts if 2 values are equal
 * `eqArrays(...)`: Compares 2 arrays and returns true if they a perfect match
+  * `assertArraysEqual(...)`: Verbosely and colourfully asserts if 2 arrays are equal
 * `eqObjects(...)`: Compares 2 objects and returns true if they a perfect match
-* `assertArraysEqual(...)`: Verbosely and colourfully asserts if 2 arrays are equal
-* `assertObjectEqual(...)`: Verbosely and colourfully asserts if 2 objects are equal
+  * `assertObjectEqual(...)`: Verbosely and colourfully asserts if 2 objects are equal
 * `head(...)`: Returns the first element of a provided array 
 * `tail(...)`: Returns an entire provided array except the first element
 * `middle(...)`: Returns the middle element(s) of a provided array
