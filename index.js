@@ -11,6 +11,13 @@ const middle = require('./middle');
 // ('./findKeyByValue.js);
 // ('./eqObjects.js);
 // ('./eqArrays.js);
+// ('./assertObjectEquals.js);
+// ('./takeuntil.js);
+// ('./without.js);
+// ('./map.js);
+// ('./countLetters.js);
+// ('./countUntil.js);
+
 
 module.exports = {
   assertEqual,
